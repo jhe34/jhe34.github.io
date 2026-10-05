@@ -11,17 +11,15 @@
 <style>
   :root {
     --bg: #F2F4F6;
-    --surface: #FFFFFF;
     --ink: #16212E;
     --muted: #586676;
     --rule: #D3DAE1;
-    --accent: #CC0033; /* Rutgers scarlet, used sparingly */
+    --accent: #CC0033;
     --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #141B23;
-      --surface: #1B242E;
       --ink: #E6EBF0;
       --muted: #9AA8B6;
       --rule: #2C3946;
@@ -56,7 +54,6 @@
     .rail { position: sticky; top: 4rem; align-self: start; }
   }
 
-  /* Hero: the name is the one bold move, set ultra-condensed and heavy */
   .name {
     font-stretch: 62%;
     font-weight: 800;
@@ -67,7 +64,6 @@
   .name span { display: block; }
   .role {
     margin-top: 1.25rem;
-    font-stretch: 100%;
     font-size: 1.125rem;
     color: var(--muted);
     max-width: 26ch;
@@ -88,10 +84,9 @@
   p { max-width: 64ch; }
   p + p { margin-top: 1rem; }
 
-  /* Education & experience timeline */
   .timeline { list-style: none; border-left: 2px solid var(--rule); padding-left: 1.5rem; display: grid; gap: 2rem; }
-  .timeline li { position: relative; }
-  .timeline li::before {
+  .timeline > li { position: relative; }
+  .timeline > li::before {
     content: ""; position: absolute; left: calc(-1.5rem - 7px); top: 0.45rem;
     width: 12px; height: 12px; border-radius: 50%;
     background: var(--bg); border: 2px solid var(--accent);
@@ -100,12 +95,12 @@
   .what { font-weight: 650; font-size: 1.125rem; }
   .where { color: var(--muted); }
   .timeline p { margin-top: 0.5rem; }
+  .duties { margin-top: 0.5rem; padding-left: 1.1rem; max-width: 64ch; }
+  .duties li + li { margin-top: 0.35rem; }
 
   .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem 2rem; }
   .skills h3 { font-size: 1rem; font-weight: 650; margin-bottom: 0.35rem; }
   .skills ul { list-style: none; color: var(--muted); }
-
-  .placeholder { background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 0 0.25em; border-radius: 3px; }
 
   footer { grid-column: 1 / -1; color: var(--muted); font-size: 0.875rem; }
 </style>
@@ -118,10 +113,8 @@
     <p class="role">Finance student at Rutgers Business School, aiming for a career in advisory.</p>
     <div class="bar" aria-hidden="true"></div>
     <ul class="contact">
-      <li><a href="mailto:you@example.com">Email me</a></li>
-      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
-      <li><a href="https://github.com/your-username">GitHub</a></li>
-      <li><a href="resume.pdf">Download résumé (PDF)</a></li>
+      <li><a href="mailto:josephelshamy06@gmail.com">josephelshamy06@gmail.com</a></li>
+      <li><a href="https://github.com/jhe34">GitHub</a></li>
     </ul>
   </aside>
 
@@ -136,16 +129,16 @@
       <h2>Education</h2>
       <ol class="timeline">
         <li>
-          <div class="when">Expected <span class="placeholder">May 2028</span></div>
+          <div class="when">Expected May 2028</div>
           <div class="what">B.S. in Finance</div>
-          <div class="where">Rutgers Business School</div>
-          <p>Relevant coursework: Business Operations Analytics, <span class="placeholder">Corporate Finance, Financial Accounting</span>.</p>
+          <div class="where">Rutgers Business School, New Brunswick, NJ</div>
+          <p>Relevant coursework: Management Skills, Microeconomics, Financial Management.</p>
         </li>
         <li>
-          <div class="when">Summer 2026</div>
-          <div class="what">Strategic Management</div>
-          <div class="where">London School of Economics</div>
-          <p><span class="placeholder">One line on what you studied or a project you completed.</span></p>
+          <div class="when">August 2026</div>
+          <div class="what">Summer School, Strategic Management</div>
+          <div class="where">London School of Economics, London, UK</div>
+          <p>Grade: A+</p>
         </li>
       </ol>
     </section>
@@ -154,34 +147,79 @@
       <h2>Experience</h2>
       <ol class="timeline">
         <li>
-          <div class="when"><span class="placeholder">Month Year – Present</span></div>
-          <div class="what"><span class="placeholder">Role title</span></div>
-          <div class="where"><span class="placeholder">Organization</span></div>
-          <p><span class="placeholder">What you did and the result, ideally with a number.</span></p>
+          <div class="when">June 2026 – July 2026</div>
+          <div class="what">On Location Official Hospitality</div>
+          <div class="where">2026 FIFA World Cup, East Rutherford, NJ</div>
+          <ul class="duties">
+            <li>Hospitality steward for the largest sport event serving 40+ VIP guests across 4 matches</li>
+            <li>Worked with a team of 5-8 members to deliver platinum-level service to 10+ VIP guests per event</li>
+            <li>Handled guest relations, client support, and event logistics for guests in a fast-paced environment</li>
+          </ul>
         </li>
         <li>
-          <div class="when"><span class="placeholder">Month Year – Month Year</span></div>
-          <div class="what"><span class="placeholder">Role title</span></div>
-          <div class="where"><span class="placeholder">Organization</span></div>
-          <p><span class="placeholder">What you did and the result, ideally with a number.</span></p>
+          <div class="when">August 2024 – August 2025</div>
+          <div class="what">Associate</div>
+          <div class="where">Starbucks, Monroe Twp, NJ</div>
+          <ul class="duties">
+            <li>Prepared and served for 60+ customers per shift, keeping orders accurate and rush hours efficient</li>
+            <li>Handled cash and card transactions, answered customer questions, and resolved order issues</li>
+            <li>Kept the store stocked, clean, and organized, and trained 6 new team members on drink preparation</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">July 2025</div>
+          <div class="what">Intern</div>
+          <div class="where">BNY Mellon, Remote</div>
+          <ul class="duties">
+            <li>Completed BNY Mellon's competitive Freshman JumpStart program, gaining early exposure to the financial services industry while developing skills in networking, personal branding, and career development</li>
+            <li>Engaged with senior leaders through panel discussions, developing a stronger understanding of BNY Mellon's global businesses and career pathways in finance and consulting</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">January 2025 – Present</div>
+          <div class="what">General Member</div>
+          <div class="where">Association of Latino Professionals for America (ALPFA), New Brunswick, NJ</div>
+          <ul class="duties">
+            <li>Attending 10+ professional development workshops, improving technical and behavioral skills</li>
+            <li>Networking with recruiters and industry professionals in Finance and Consulting</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">September 2025 – September 2026</div>
+          <div class="what">Philanthropy Committee Member</div>
+          <div class="where">Chi Phi Fraternity, New Brunswick, NJ</div>
+          <ul class="duties">
+            <li>Coordinated 100+ students across large-scale fundraising events, managing volunteer assignments and event logistics that helped raise $19,000 for an Embrace Kids patient with chapter philanthropy</li>
+            <li>Led 3+ tabling fundraisers per month and developed partnerships with student organizations, driving outreach and logistics that averaged approximately $250 in proceeds per event</li>
+          </ul>
         </li>
       </ol>
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
+      <h2>Skills and interests</h2>
       <div class="skills">
         <div>
-          <h3>Analysis</h3>
-          <ul><li>Financial statement analysis</li><li>Break-even and cost modeling</li><li>Strategic frameworks</li></ul>
+          <h3>Technical</h3>
+          <ul><li>Excel</li><li>PowerPoint</li><li>Word</li><li>Google Suite</li><li>Adobe Creative Suite</li><li>Canva</li><li>Claude AI</li></ul>
         </div>
         <div>
-          <h3>Tools</h3>
-          <ul><li>Excel</li><li class="placeholder">PowerPoint</li><li class="placeholder">Add more</li></ul>
+          <h3>Languages</h3>
+          <ul><li>English (fluent)</li><li>Spanish (conversational)</li><li>Arabic (conversational)</li></ul>
         </div>
         <div>
-          <h3>Outside class</h3>
-          <ul><li>Soccer, playing and following</li><li class="placeholder">Clubs or organizations</li></ul>
+          <h3>Activities</h3>
+          <ul><li>Sociedad Estudiantil Dominicana</li><li>Rutgers Egyptian Club</li><li>Arab Cultural Club</li></ul>
+        </div>
+        <div>
+          <h3>Interests</h3>
+          <ul><li>Soccer</li><li>Gym</li><li>Consulting and finance</li><li>Cars</li><li>Travel</li><li>Video games</li></ul>
         </div>
       </div>
     </section>
