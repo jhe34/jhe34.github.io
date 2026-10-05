@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joseph Elshamy · Finance, Rutgers Business School</title>
+<meta name="description" content="Joseph Elshamy, finance student at Rutgers Business School interested in advisory and strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F4F6;
+    --surface: #FFFFFF;
+    --ink: #16212E;
+    --muted: #586676;
+    --rule: #D3DAE1;
+    --accent: #CC0033; /* Rutgers scarlet, used sparingly */
+    --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141B23;
+      --surface: #1B242E;
+      --ink: #E6EBF0;
+      --muted: #9AA8B6;
+      --rule: #2C3946;
+      --accent: #FF4D6D;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media (min-width: 860px) {
+    .page { grid-template-columns: 300px 1fr; gap: 5rem; }
+    .rail { position: sticky; top: 4rem; align-self: start; }
+  }
+
+  /* Hero: the name is the one bold move, set ultra-condensed and heavy */
+  .name {
+    font-stretch: 62%;
+    font-weight: 800;
+    font-size: clamp(3.5rem, 11vw, 6rem);
+    line-height: 0.88;
+    letter-spacing: -0.01em;
+  }
+  .name span { display: block; }
+  .role {
+    margin-top: 1.25rem;
+    font-stretch: 100%;
+    font-size: 1.125rem;
+    color: var(--muted);
+    max-width: 26ch;
+  }
+  .bar { width: 48px; height: 6px; background: var(--accent); margin-top: 1.5rem; }
+
+  .contact { list-style: none; margin-top: 2rem; display: grid; gap: 0.5rem; }
+  .contact a { font-weight: 500; }
+
+  main section { padding-bottom: 3rem; margin-bottom: 3rem; border-bottom: 1px solid var(--rule); }
+  main section:last-child { border-bottom: none; margin-bottom: 0; }
+  h2 {
+    font-stretch: 110%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  p { max-width: 64ch; }
+  p + p { margin-top: 1rem; }
+
+  /* Education & experience timeline */
+  .timeline { list-style: none; border-left: 2px solid var(--rule); padding-left: 1.5rem; display: grid; gap: 2rem; }
+  .timeline li { position: relative; }
+  .timeline li::before {
+    content: ""; position: absolute; left: calc(-1.5rem - 7px); top: 0.45rem;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--accent);
+  }
+  .when { color: var(--muted); font-size: 0.9375rem; }
+  .what { font-weight: 650; font-size: 1.125rem; }
+  .where { color: var(--muted); }
+  .timeline p { margin-top: 0.5rem; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem 2rem; }
+  .skills h3 { font-size: 1rem; font-weight: 650; margin-bottom: 0.35rem; }
+  .skills ul { list-style: none; color: var(--muted); }
+
+  .placeholder { background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 0 0.25em; border-radius: 3px; }
+
+  footer { grid-column: 1 / -1; color: var(--muted); font-size: 0.875rem; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="rail">
+    <h1 class="name"><span>Joseph</span><span>Elshamy</span></h1>
+    <p class="role">Finance student at Rutgers Business School, aiming for a career in advisory.</p>
+    <div class="bar" aria-hidden="true"></div>
+    <ul class="contact">
+      <li><a href="mailto:you@example.com">Email me</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+      <li><a href="https://github.com/your-username">GitHub</a></li>
+      <li><a href="resume.pdf">Download résumé (PDF)</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a junior studying finance at Rutgers Business School. I'm drawn to the problems that sit between numbers and strategy: why a business makes the decisions it does, and what the financials say about whether those decisions are working.</p>
+      <p>This past summer I studied strategic management at the London School of Economics, which sharpened my interest in consulting and advisory work. I'm currently recruiting for advisory internships.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">Expected <span class="placeholder">May 2028</span></div>
+          <div class="what">B.S. in Finance</div>
+          <div class="where">Rutgers Business School</div>
+          <p>Relevant coursework: Business Operations Analytics, <span class="placeholder">Corporate Finance, Financial Accounting</span>.</p>
+        </li>
+        <li>
+          <div class="when">Summer 2026</div>
+          <div class="what">Strategic Management</div>
+          <div class="where">London School of Economics</div>
+          <p><span class="placeholder">One line on what you studied or a project you completed.</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when"><span class="placeholder">Month Year – Present</span></div>
+          <div class="what"><span class="placeholder">Role title</span></div>
+          <div class="where"><span class="placeholder">Organization</span></div>
+          <p><span class="placeholder">What you did and the result, ideally with a number.</span></p>
+        </li>
+        <li>
+          <div class="when"><span class="placeholder">Month Year – Month Year</span></div>
+          <div class="what"><span class="placeholder">Role title</span></div>
+          <div class="where"><span class="placeholder">Organization</span></div>
+          <p><span class="placeholder">What you did and the result, ideally with a number.</span></p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Analysis</h3>
+          <ul><li>Financial statement analysis</li><li>Break-even and cost modeling</li><li>Strategic frameworks</li></ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul><li>Excel</li><li class="placeholder">PowerPoint</li><li class="placeholder">Add more</li></ul>
+        </div>
+        <div>
+          <h3>Outside class</h3>
+          <ul><li>Soccer, playing and following</li><li class="placeholder">Clubs or organizations</li></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Joseph Elshamy</footer>
+</div>
+</body>
+</html>
