@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joseph Elshamy · Finance, Rutgers Business School</title>
-<meta name="description" content="Joseph Elshamy, finance student at Rutgers Business School interested in advisory and strategy.">
+<meta name="description" content="Joseph Elshamy, finance student at Rutgers Business School interested in advisory and consulting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
     margin-top: 1.25rem;
     font-size: 1.125rem;
     color: var(--muted);
-    max-width: 26ch;
+    max-width: 34ch;
   }
   .bar { width: 48px; height: 6px; background: var(--accent); margin-top: 1.5rem; }
 
@@ -84,6 +84,7 @@
   p { max-width: 64ch; }
   p + p { margin-top: 1rem; }
 
+  /* Timelines for education, experience, leadership */
   .timeline { list-style: none; border-left: 2px solid var(--rule); padding-left: 1.5rem; display: grid; gap: 2rem; }
   .timeline > li { position: relative; }
   .timeline > li::before {
@@ -98,9 +99,20 @@
   .duties { margin-top: 0.5rem; padding-left: 1.1rem; max-width: 64ch; }
   .duties li + li { margin-top: 0.35rem; }
 
-  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem 2rem; }
+  /* Projects */
+  .projects { display: grid; gap: 2rem; }
+  .project { border-top: 3px solid var(--accent); padding-top: 1rem; }
+  .project h3 { font-size: 1.25rem; font-weight: 700; font-stretch: 105%; }
+  .project .meta { color: var(--muted); font-size: 0.9375rem; margin-top: 0.15rem; }
+  .project p { margin-top: 0.6rem; }
+  .project .link { display: inline-block; margin-top: 0.75rem; font-weight: 600; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
   .skills h3 { font-size: 1rem; font-weight: 650; margin-bottom: 0.35rem; }
-  .skills ul { list-style: none; color: var(--muted); }
+  .skills ul { list-style: none; }
+  .skills .proof { margin-top: 0.5rem; font-size: 0.9375rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 0.6rem; }
+  .outside { margin-top: 2rem; color: var(--muted); }
 
   footer { grid-column: 1 / -1; color: var(--muted); font-size: 0.875rem; }
 </style>
@@ -110,7 +122,7 @@
 
   <aside class="rail">
     <h1 class="name"><span>Joseph</span><span>Elshamy</span></h1>
-    <p class="role">Finance student at Rutgers Business School, aiming for a career in advisory.</p>
+    <p class="role">Finance student at Rutgers Business School with client-facing experience at the 2026 FIFA World Cup and a strong interest in advisory and consulting.</p>
     <div class="bar" aria-hidden="true"></div>
     <ul class="contact">
       <li><a href="mailto:josephelshamy06@gmail.com">josephelshamy06@gmail.com</a></li>
@@ -161,7 +173,7 @@
           <div class="what">Associate</div>
           <div class="where">Starbucks, Monroe Twp, NJ</div>
           <ul class="duties">
-            <li>Prepared and served for 60+ customers per shift, keeping orders accurate and rush hours efficient</li>
+            <li>Prepared drinks and served 60+ customers per shift, keeping orders accurate and rush hours efficient</li>
             <li>Handled cash and card transactions, answered customer questions, and resolved order issues</li>
             <li>Kept the store stocked, clean, and organized, and trained 6 new team members on drink preparation</li>
           </ul>
@@ -176,6 +188,30 @@
           </ul>
         </li>
       </ol>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Break-even analysis</h3>
+          <div class="meta">Business Operations Analytics, Rutgers Business School, Fall 2026</div>
+          <p>Calculated break-even points and graphed the relationship between costs, revenue, and profit to show how sales volume drives profitability. The analysis turns a pricing and cost structure into a clear answer to a core business question: how much do we need to sell to cover our costs?</p>
+          <a class="link" href="break-even-analysis.pdf">View the analysis (PDF)</a>
+        </article>
+        <article class="project">
+          <h3>Strategic management coursework</h3>
+          <div class="meta">London School of Economics Summer School, August 2026</div>
+          <p>Applied strategic management frameworks to analyze how companies build and sustain a competitive advantage, evaluating industry structure and strategic choices the way an advisory team would. Earned an A+ in the course.</p>
+          <a class="link" href="https://www.lse.ac.uk/study-at-lse/summer-schools/summer-school">About the LSE Summer School</a>
+        </article>
+        <article class="project">
+          <h3>Embrace Kids fundraising campaign</h3>
+          <div class="meta">Chi Phi Fraternity Philanthropy Committee, 2025–2026</div>
+          <p>Helped plan and run a chapter-wide campaign that raised $19,000 for an Embrace Kids patient. Coordinated 100+ student volunteers across large-scale events, led 3+ tabling fundraisers a month averaging about $250 each, and built partnerships with other student organizations to expand outreach.</p>
+          <a class="link" href="https://www.embracekids.org">About Embrace Kids Foundation</a>
+        </article>
+      </div>
     </section>
 
     <section id="leadership">
@@ -203,25 +239,33 @@
     </section>
 
     <section id="skills">
-      <h2>Skills and interests</h2>
+      <h2>Skills</h2>
       <div class="skills">
         <div>
+          <h3>Financial and analytical</h3>
+          <ul><li>Financial management</li><li>Break-even and cost analysis</li><li>Strategic management frameworks</li><li>Microeconomic analysis</li></ul>
+          <p class="proof">A+ in Strategic Management at the London School of Economics</p>
+        </div>
+        <div>
+          <h3>Client service and communication</h3>
+          <ul><li>Client and guest relations</li><li>Problem resolution</li><li>Professional networking</li></ul>
+          <p class="proof">Served 40+ VIP guests across 4 matches at the 2026 FIFA World Cup</p>
+        </div>
+        <div>
+          <h3>Leadership and project management</h3>
+          <ul><li>Event planning and logistics</li><li>Team coordination</li><li>Training and onboarding</li><li>Partnership building</li></ul>
+          <p class="proof">Coordinated 100+ students to help raise $19,000 for Embrace Kids</p>
+        </div>
+        <div>
           <h3>Technical</h3>
-          <ul><li>Excel</li><li>PowerPoint</li><li>Word</li><li>Google Suite</li><li>Adobe Creative Suite</li><li>Canva</li><li>Claude AI</li></ul>
+          <ul><li>Excel</li><li>PowerPoint and Word</li><li>Google Suite</li><li>Adobe Creative Suite and Canva</li><li>Claude AI</li></ul>
         </div>
         <div>
           <h3>Languages</h3>
           <ul><li>English (fluent)</li><li>Spanish (conversational)</li><li>Arabic (conversational)</li></ul>
         </div>
-        <div>
-          <h3>Activities</h3>
-          <ul><li>Sociedad Estudiantil Dominicana</li><li>Rutgers Egyptian Club</li><li>Arab Cultural Club</li></ul>
-        </div>
-        <div>
-          <h3>Interests</h3>
-          <ul><li>Soccer</li><li>Gym</li><li>Consulting and finance</li><li>Cars</li><li>Travel</li><li>Video games</li></ul>
-        </div>
       </div>
+      <p class="outside">Outside class: Sociedad Estudiantil Dominicana, Rutgers Egyptian Club, Arab Cultural Club, soccer, the gym, cars, and travel.</p>
     </section>
   </main>
 
